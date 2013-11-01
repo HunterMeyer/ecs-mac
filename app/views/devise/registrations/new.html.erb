@@ -1,0 +1,5 @@
+<% if resource_name.to_s == 'vendor' %>
+	<%= render 'vendors/sign_up' %>
+<% else resource_name.to_s == 'attendee' %>
+	<%= render 'attendees/sign_up' %>
+<% end %>

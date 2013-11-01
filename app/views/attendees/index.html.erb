@@ -1,0 +1,11 @@
+<h1>Attendees</h1>
+
+<% if @attendees.any? %>
+	<% @attendees.each do |attendee| %>
+		<strong><%= "#{attendee.first_name} #{attendee.last_name}" %></strong>
+		<small><%= "#{attendee.industry}" %></small>
+		<small><%= "#{attendee.email} #{attendee.phone}" %></small>
+	<% end %>
+<% else %>
+	<h2>No attendees.</h2>
+<% end %>
