@@ -1,0 +1,11 @@
+development:
+  adapter: postgresql
+  database: ecs_development
+
+test:
+  adapter: postgresql
+  database: ecs_test
+
+production:
+  adapter: postgresql
+  database: ecs_production
