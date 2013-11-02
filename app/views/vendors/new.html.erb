@@ -1,37 +1,26 @@
 <h1>Vendor Sign Up</h1>
 
 <%= form_for @vendor do |f| %>
-
 	<%= f.label       :first_name %>
-	<%= f.text_field  :first_name %>
-
+	<%= f.text_field  :first_name, autofocus: true %>
   <%= f.label       :last_name %>
 	<%= f.text_field  :last_name %>
-
 	<%= f.label       :vendor_name, 'Vendor Name' %>
 	<%= f.text_field  :vendor_name %>
-
 	<%= f.label       :email %>
   <%= f.email_field :email %>
-
 	<%= f.label	      :phone, 'Phone Number' %>
 	<%= f.text_field  :phone %>
-
 	<%= f.label       :address, 'Street Address' %>
 	<%= f.text_field  :address %>
-
 	<%= f.label       :city %>
 	<%= f.text_field  :city %>
-
 	<%= f.label       :state %>
 	<%= f.text_field  :state %>
-
 	<%= f.label       :zip, 'Zip Code' %>
 	<%= f.text_field  :zip %>
-
 	<%= f.label       :comments %>
 	<%= f.text_area   :comments %>
-
 	<div>
 		<%= f.check_box :speak_topic %>
 		<%= f.label     :speak_topic, 'I\'m willing to speak on this topic' %>
