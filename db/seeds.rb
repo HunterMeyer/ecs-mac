@@ -11,8 +11,7 @@ admin = Admin.create(
 	last_name:             'User',
 	email:                 'admin@user.com',
 	password:              '12345678',
-	password_confirmation: '12345678',
-	role:                  'admin'
+	password_confirmation: '12345678'
 	)
 
 attendee = Attendee.create(
@@ -26,10 +25,7 @@ attendee = Attendee.create(
 	zip:                   '32825',
 	industry:              'Software',
 	pull_out:              'Stand up desk',
-	concerns:              'Beach front property',
-	questions:             'How to protect my business?',
-	password:              '12345678',
-	password_confirmation: '12345678'
+	concerns:              'Beach front property'
 	)
 
 vendor = Vendor.create(
@@ -44,7 +40,5 @@ vendor = Vendor.create(
 	zip:                   '32825',
 	comments:              'Looking forward to the event',
 	speak_topic:           true,
-	speak_topic_ceu:       true,
-	password:              '12345678',
-	password_confirmation: '12345678'
+	speak_topic_ceu:       true
 	)
