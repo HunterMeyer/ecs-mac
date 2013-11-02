@@ -1,6 +1,11 @@
-<h1><%= "#{@admin.first_name} #{@admin.last_name}" %></h1>
+<% if current_admin %>
+	<h1><%= "#{@admin.first_name} #{@admin.last_name}" %></h1>
 
-<span>
-	<%= "#{@admin.email}" %>
-	<%= "#{@admin.role}" %>
-</span>
+	<span>
+		<%= "#{@admin.email}" %>
+		<%= "#{@admin.role}" %>
+	</span>
+<% else %>
+  <h3>Oops. You don't have permission to view this page</h3>
+  <%= link_to 'Back', root_path %>
+<% end %>
