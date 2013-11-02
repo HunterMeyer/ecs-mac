@@ -21,7 +21,11 @@
   <%= f.label          :password_confirmation %>
   <%= f.password_field :password_confirmation %>
 
-  <span class='button' style='display: block;'><%= f.submit 'Sign up' %></span>
+  <h3>Confirm Changes</h3>
+  <%= f.label          :current_password %>
+  <%= f.password_field :current_password %>
+
+  <span class='button' style='display: block;'><%= f.submit 'Update' %></span>
 <% end %>
 
 <h3>Cancel my account</h3>
