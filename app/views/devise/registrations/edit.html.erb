@@ -1,7 +1,3 @@
 <% if resource_name.to_s == 'admin' %>
   <%= render 'admins/edit' %>
-<% elsif resource_name.to_s == 'attendee' %>
-  <%= render 'attendees/edit' %>
-<% else %>
-	<%= render 'vendors/edit' %>
 <% end %>
