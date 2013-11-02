@@ -6,8 +6,45 @@
         <ul class='nav pull-right'>
           <li><%= link_to 'Lectures',  lectures_path %></li>
           <li><%= link_to 'FAQ',       faq_path %></li>
-          <li><%= link_to 'Vendors',   new_vendor_session_path %></li>
-          <li><%= link_to 'Attendees', new_attendee_session_path %></li>
+          
+          <% if current_admin %>
+            <li class='dropdown'>
+              <a href='#' class='dropdown-toggle' data-toggle='dropdown'><%= current_admin.first_name %><b class='caret'></b></a>
+              <ul class='dropdown-menu'>
+                <li><%= link_to 'Attendees',    attendees_path %></li>
+                <li><%= link_to 'Vendors',      vendors_path %></li>
+                <li><%= link_to 'Admins',       admins_path %></li>
+                <li class='divider'></li>
+                <li><%= link_to 'My Profile',   current_admin %></li>
+                <li><%= link_to 'Edit Profile', edit_admin_registration_path %></li>
+                <li class='divider'></li>
+                <li><%= link_to 'Logout',       destroy_vendor_session_path, method: :delete %> </li>
+              </ul>
+            </li>
+          <% elsif current_vendor %>
+            <li class='dropdown'>
+              <a href='#' class='dropdown-toggle' data-toggle='dropdown'><%= current_vendor.first_name %><b class='caret'></b></a>
+              <ul class='dropdown-menu'>
+                <li><%= link_to 'My Profile',   current_vendor %></li>
+                <li><%= link_to 'Edit Profile', edit_vendor_registration_path %></li>
+                <li class='divider'></li>
+                <li class='nav-right'><%= link_to 'Logout', destroy_vendor_session_path, method: :delete %></li>
+              </ul>
+            </li>
+          <% elsif current_attendee %>
+            <li class='dropdown'>
+              <a href='#' class='dropdown-toggle' data-toggle='dropdown'><%= current_attendee.first_name %><b class='caret'></b></a>
+              <ul class='dropdown-menu'>
+                <li><%= link_to 'My Profile',   current_attendee %></li>
+                <li><%= link_to 'Edit Profile', edit_attendee_registration_path %></li>
+                <li class='divider'></li>
+                <li class='nav-right'><%= link_to 'Logout', destroy_attendee_session_path, method: :delete %></li>
+              </ul>
+            </li>
+          <% else %>
+            <li><%= link_to 'Vendors',   new_vendor_session_path %></li>
+            <li><%= link_to 'Attendees', new_attendee_session_path %></li>
+          <% end %>
         </ul>
       </nav>
     </div>
