@@ -15,14 +15,14 @@ class VendorsController < ApplicationController
     @vendor = Vendor.new(vendor_params)
     if @vendor.save 
       flash[:success] = 'Thanks for signing up!'
-      redirect_to @vendor
+      redirect_to root_path
     else
       render 'new'
     end
   end
 
 private
-  def program_params
-    params.require(:vendor).permit(:first_name, :last_name, :email, :phone, :address, :city, :state, :zip, :industry, :pull_out, :concerns, :questions)
+  def vendor_params
+    params.require(:vendor).permit(:first_name, :last_name, :email, :phone, :address, :city, :state, :zip, :vendor_name, :comments, :speak_topic, :speak_topic_ceu)
   end
 end
