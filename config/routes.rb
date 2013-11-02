@@ -1,6 +1,6 @@
 Ecs::Application.routes.draw do
   devise_for :admins
-  resources  :admins,    only: [:index, :show]
+  resources  :admins
   resources  :attendees, only: [:create, :new]
   resources  :vendors,   only: [:create, :new]
   
