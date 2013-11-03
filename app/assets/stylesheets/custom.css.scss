@@ -2,7 +2,10 @@
 
 /* Misc, Mixins, Etc */
 $greyHover: #c4c4c4;
+$greyBackground: #dadada;
 $brightRed: #C20909;
+$brightBlue: #097FCE;
+$blueHover: #0D91E9;
 
 /* Universal */
 html {
@@ -10,6 +13,7 @@ html {
 }
 
 body {
+  background: image-url('bg.png');
   padding-top: 30px;
 }
 
@@ -22,6 +26,8 @@ textarea {
 }
 
 .center {
+  max-width: 940px;
+  width: 80%;
   text-align: center;
   h1 {
     margin-bottom: 10px;
@@ -59,8 +65,7 @@ p {
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
-  color: #fff;
-  /*text-shadow: 1px 1px 1px rgb(116, 116, 116);*/
+  color: white;
   font-family: Montserrat Alternates, sans-serif;
   letter-spacing: -1px;
   padding-top: 9px;
@@ -146,22 +151,69 @@ p {
 }
 
 #attendee {
-
 }
 
+/* Information Cards */
+.card {
+  background-color: $greyBackground;
+  border-bottom: 1px solid #999;
+  border-radius: 2px;
+  font-size: 1rem;
+}
 
-/* Sign Up Button */
-.sign-up {
-  border: none;
-  color:white;
-  width: 130px;
-  height: 30px;
+div.tall {
+  display: inline-block;
+  margin-top: 2%;
+  width: 30%;
+  float: left;
+}
+
+div.wide {
+  display: block;
+  margin-top: 2%;
+  margin-left: 2%;
+  width: 68%;
+  float: right;
+}
+
+span.main-info {
+  display: block;
+  padding: 10px;
+}
+
+span.quick-info {
+  display: block;
+  padding: 15px;
+  text-align: left;
+}
+
+span.bold {
+  font-weight: bold;
+}
+
+/* Lecture Button */
+.lecture-button {
+  display: inline-block;
+  margin: 0 auto;
+  margin-top: 30px;
+  width: 320px;
+  height: 50px;
+  font-size: 20px;
+  line-height: 45px;
+  background-color: $brightBlue;
   border-radius: 3px;
-  background-color: #29B4C7;
-  border-bottom: 2px solid #1D808D;
-  &:hover {
-    background-color: #1D808D;
-    border-top: 2px solid #29B4C7;
+  a {
+    display: block;
+    color: white;
+    width: 320px;
+    height: 50px;
+  }
+  a:hover, a:focus {
+    /*color: white;*/
+    border-radius: 3px;
+    background-color: $blueHover;
+    text-decoration: none;
+    outline: none;
   }
 }
 
