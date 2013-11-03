@@ -1,12 +1,16 @@
 @import 'bootstrap';
 
+/* Misc, Mixins, Etc */
+$greyHover: #c4c4c4;
+$brightRed: #C20909;
+
 /* Universal */
 html {
   overflow-y: scroll;
 }
 
 body {
-  padding-top: 36px;
+  padding-top: 30px;
 }
 
 section {
@@ -56,50 +60,95 @@ p {
   margin-right: 10px;
   font-size: 1.7em;
   color: #fff;
-  text-shadow: 1px 1px 1px rgb(116, 116, 116);
+  /*text-shadow: 1px 1px 1px rgb(116, 116, 116);*/
   font-family: Montserrat Alternates, sans-serif;
   letter-spacing: -1px;
   padding-top: 9px;
   font-weight: bold;
-  &:hover{
+  &:hover, &:focus {
     text-decoration: none;
+    outline: none;
   }
 }
 
 .navbar-inverse .navbar-inner {
-  background-color: #C20909;
+  background-color: $brightRed;
   background-image: none;
   border: none;
-  border-bottom: 2px solid rgba(161, 159, 159, 0.7);
+  /*border-bottom: 1px solid white;*/
 }
 
 .navbar-inverse .brand, .navbar-inverse .nav > li > a {
   color: white;
   text-shadow: none;
-  &:hover {
-    color: #29B4C7;
+  &:hover, &:focus {
+    text-decoration: none;
+    outline: none;
+    background-color: white;
+    color: $brightRed;
   }
 }
 
-/* Hero-Unit */
-.hero-unit {
-  background: url('chattering-blur.jpg') no-repeat;
-  background-position: 70% 45%;
-  max-width: 940px;
-  height: auto;
+/* Home Page Banner */
+.banner {
+  width: 100%;
+  height: 350px;
+  background: image-url('banner_alt.png');
+  background-position: 100% 50%;
+  text-align: center;
+  color: white;
 }
 
-.bright {
-  font-family: Montserrat Alternates, sans-serif !important;
-  color: white !important;
-  text-shadow: 1px 1px 1px rgb(116, 116, 116);
+.welcome {
+  display: block;
+  padding-top: 60px;
+  font-size: 35px;
 }
 
-.brighter {
-  font-family: 'Raleway Dots', cursive;
-  color: white !important;
-  text-shadow: 1px 1px 1px rgb(116, 116, 116);
+.brand-name {
+  display: block;
+  padding-top: 30px;
+  font-size: 45px;
 }
+
+.limited-space {
+  display: block;
+  padding-top: 40px;
+  font-size: 30px;
+}
+
+.signup-button {
+  display: inline-block;
+  margin: 0 auto;
+  margin-top: 30px;
+  width: 160px;
+  height: 50px;
+  font-size: 30px;
+  line-height: 45px;
+  background-color: $brightRed;
+  border-radius: 3px;
+  a {
+    display: block;
+    color: white;
+    width: 160px;
+    height: 50px;
+  }
+  a:hover, a:focus {
+    color: $brightRed;
+    border-radius: 3px;
+    background-color: white;
+    text-decoration: none;
+    outline: none;
+  }
+}
+
+#vendor {
+}
+
+#attendee {
+
+}
+
 
 /* Sign Up Button */
 .sign-up {
