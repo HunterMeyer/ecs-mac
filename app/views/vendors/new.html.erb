@@ -1,52 +1,41 @@
-<h1>Vendor Sign Up</h1>
-<div class='center container'>
-	<form role='form'>
+<div class='container'>
+	<h1>Vendor Sign Up</h1>
+	<form role='form' class='span4'>
 		<%= form_for @vendor do |f| %>
-			<div class='form-inline'>
-				<%= f.text_field  :first_name, placeholder: 'First Name', autofocus: true, class: 'form-control' %>
-				<%= f.text_field  :last_name,  placeholder: 'Last Name', class: 'form-control' %>
+			<div class='controls controls-row'>
+				<%= f.text_field  :vendor_name, placeholder: 'Vendor Name', autofocus: true, class: 'span4' %>
 			</div>
-			<div class='form-group'>
-				<%= f.text_field  :vendor_name, placeholder: 'Vendor Name', class: 'input-xlarge' %>
+			<div class='controls controls-row'>
+				<%= f.text_field  :first_name, placeholder: 'First Name', class: 'span2' %>
+				<%= f.text_field  :last_name,  placeholder: 'Last Name', class: 'span2' %>
 			</div>
-			<div class='form-group'>
-				<%= f.label       :email %>
-			  <%= f.email_field :email, class: 'form-control' %>
+			<div class='controls controls-row'>
+			  <%= f.email_field :email, placeholder: 'Email', class: 'span2' %>
+				<%= f.text_field  :phone, placeholder: 'Phone Number', class: 'span2' %>
 			</div>
-			<div class='form-group'>
-				<%= f.label	      :phone, 'Phone Number' %>
-				<%= f.text_field  :phone, class: 'form-control' %>
+			<div class='controls controls-row'>
+				<%= f.text_field  :address, placeholder: 'Street Address', class: 'span4' %>
 			</div>
-			<div class='form-group'>
-				<%= f.label       :address, 'Street Address' %>
-				<%= f.text_field  :address, class: 'form-control' %>
+			<div class='controls controls-row'>
+				<%= f.text_field  :city, placeholder: 'City', class: 'span2' %>
+				<%= f.text_field  :state, placeholder: 'State', class: 'span1' %>
+				<%= f.text_field  :zip, placeholder: 'Zip', class: 'span1' %>
 			</div>
-			<div class='form-group'>
-				<%= f.label       :city %>
-				<%= f.text_field  :city, class: 'form-control' %>
-			</div>
-			<div class='form-group'>
-				<%= f.label       :state %>
-				<%= f.text_field  :state, class: 'form-control' %>
-			</div>
-			<div class='form-group'>
-				<%= f.label       :zip, 'Zip Code' %>
-				<%= f.text_field  :zip, class: 'form-control' %>
-			</div>
-			<div class='form-group'>
-				<%= f.label       :comments %>
-				<%= f.text_area   :comments, class: 'form-control' %>
+			<div class='controls controls-row'>
+				<%= f.text_area   :comments, placeholder: 'Comments', class: 'span4', rows: '3' %>
 			</div>
 			<div class='checkbox-inline'>
-				<%= f.check_box :speak_topic %>
-				<%= f.label     :speak_topic, 'I\'m willing to speak on this topic' %>
+				<%= f.check_box :speak_topic, class: 'inline-check' %>
+				<%= f.label     :speak_topic, 'I\'m willing to speak on this topic', class: 'inline-check' %>
 			</div>
 			<div class='checkbox-inline'>
-				<%= f.check_box :speak_topic_ceu %>
-				<%= f.label     :speak_topic_ceu, 'I\'m willing to speak on this topic for CEU' %>
+				<%= f.check_box :speak_topic_ceu, class: 'inline-check' %>
+				<%= f.label     :speak_topic_ceu, 'I\'m willing to speak on this topic for CEU', class: 'inline-check' %>
 			</div>
 
-		  <span class='button' style='display: block;'><%= f.submit 'Register', class: 'btn btn-primary' %></span>
+			<span class='pull-right'>
+				<%= f.submit 'Register', class: 'btn btn-primary' %>
+			</span>
 		<% end %>
 	</form>
 </div>

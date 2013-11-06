@@ -1,5 +1,6 @@
 @import 'bootstrap';
 
+
 /* Misc, Mixins, Etc */
 $greyHover: #c4c4c4;
 $greyBackground: #F5F5F5;
@@ -16,7 +17,9 @@ html {
 
 body {
   background: image-url('background.jpg');
+  background-position: center center;
   background-size: cover;
+  background-repeat: no-repeat;
   padding-top: 30px;
 }
 
@@ -26,6 +29,10 @@ section {
 
 textarea {
   resize: vertical;
+}
+
+form.span4 {
+  margin-left: 0;
 }
 
 .center {
@@ -43,10 +50,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 3em;
+  font-size: 2.5em;
   letter-spacing: -2px;
-  margin-bottom: 30px;
-  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 30px;
+  text-align: left;
+  color: white;
 }
 
 h2 {
@@ -183,6 +192,7 @@ p {
 .googlemap {
   margin-top: 10px;
 }
+
 /* Information Cards */
 .card {
   border-bottom: 1px solid #999;
@@ -255,11 +265,32 @@ span.more-info {
     height: 50px;
   }
   a:hover, a:focus {
-    /*color: white;*/
     border-radius: 3px;
     background-color: $blueHover;
     text-decoration: none;
     outline: none;
+  }
+}
+
+/* Forms */
+.inline-check {
+  display: inline-block;
+  line-height: 24px;
+}
+
+.btn-primary {
+  display: block;
+  background-color: $brightOrange;
+  background-image: none;
+  text-shadow: none;
+  border: none;
+  height: 40px;
+  font-size: 18px;
+  border-radius: 3px;
+  color: white;
+  &:hover {
+    background-color: white;
+    color: $brightOrange;
   }
 }
 

@@ -1,31 +1,37 @@
-<h1>Attendee Sign Up</h1>
-<div class='center container'>
-	<%= form_for @attendee do |f| %>
-		<%= f.label       :first_name %>
-		<%= f.text_field  :first_name, autofocus: true %>
-	  <%= f.label       :last_name %>
-		<%= f.text_field  :last_name %>
-		<%= f.label	      :phone, 'Phone Number' %>
-		<%= f.text_field  :phone %>
-		<%= f.label       :email %>
-	  <%= f.email_field :email %>
-		<%= f.label       :address, 'Street Address' %>
-		<%= f.text_field  :address %>
-		<%= f.label       :city %>
-		<%= f.text_field  :city %>
-		<%= f.label       :state %>
-		<%= f.text_field  :state %>
-		<%= f.label       :zip, 'Zip Code' %>
-		<%= f.text_field  :zip %>
-		<%= f.label       :industry %>
-		<%= f.text_field  :industry %>
-		<%= f.label       :pull_out %>
-		<%= f.text_field  :pull_out %>
-		<%= f.label       :concerns %>
-		<%= f.text_area   :concerns %>
-		<%= f.label       :questions %>
-		<%= f.text_area   :questions %>
+<div class='container'>
+	<h1>Attendee Sign Up</h1>
+	<form role='form' class='span4'>
+		<%= form_for @attendee do |f| %>
+			<div class='controls controls-row'>
+				<%= f.text_field  :first_name, placeholder: 'First Name', class: 'span2' %>
+				<%= f.text_field  :last_name,  placeholder: 'Last Name', class: 'span2' %>
+			</div>
+			<div class='controls controls-row'>
+			  <%= f.email_field :email, placeholder: 'Email', class: 'span2' %>
+				<%= f.text_field  :phone, placeholder: 'Phone Number', class: 'span2' %>
+			</div>
+			<div class='controls controls-row'>
+				<%= f.text_field  :address, placeholder: 'Street Address', class: 'span4' %>
+			</div>
+			<div class='controls controls-row'>
+				<%= f.text_field  :city, placeholder: 'City', class: 'span2' %>
+				<%= f.text_field  :state, placeholder: 'State', class: 'span1' %>
+				<%= f.text_field  :zip, placeholder: 'Zip', class: 'span1' %>
+			</div>
+			<div class='controls controls-row'>
+				<%= f.text_field  :industry, placeholder: 'Industry', class: 'span4' %>
+			</div>
+			<div class='controls controls-row'>
+				<%= f.text_field  :pull_out, placeholder: 'Pull Out', class: 'span4' %>
+			</div>
+			<div class='controls controls-row'>
+				<%= f.text_area   :questions, placeholder: 'Specific Quesions', class: 'span4', rows: '3' %>
+			</div>
+			<div class='controls controls-row'>
+				<%= f.text_area   :concerns, placeholder: 'Immediate Concerns', class: 'span4', rows: '3' %>
+			</div>
 
-	  <span class='button' style='display: block;'><%= f.submit 'Register', class: 'btn btn-primary' %></span>
-	<% end %>
+		  <span class='pull-right'><%= f.submit 'Register', class: 'btn btn-primary' %></span>
+		<% end %>
+	</form>
 </div>
