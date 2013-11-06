@@ -1,13 +1,28 @@
-<div class='center container'>
+<div class='container'>
   <h1>Vendors</h1>
 
   <% if @vendors.any? %>
-  	<table>
+  	<table class='table table-striped'>
+      <tr>
+        <th class='orange'>First Name</th>
+        <th class='orange'>Last Name</th>
+        <th class='orange'>Vendor Name</th>
+        <th class='orange'>Email</th>
+        <th class='orange'>Phone</th>
+        <th class='orange'>Speaking?</th>
+        <th class='orange'>Speaking CEU?</th>
+      </tr>
       <% @vendors.each do |vendor| %>
-    		<strong><%= "#{vendor.first_name} #{vendor.last_name}" %></strong>
-    		<small><%= "#{vendor.vendor_name}" %></small>
-    		<small><%= "#{vendor.email} #{vendor.phone}" %></small>
-    	<% end %>
+    		<tr>
+          <td><%= "#{vendor.first_name}"      %></td>
+          <td><%= "#{vendor.last_name}"       %></td>
+    		  <td><%= "#{vendor.vendor_name}"     %></td>
+    		  <td><%= "#{vendor.email}"           %></td>
+          <td><%= "#{vendor.phone}"           %></td>
+          <td><%= "#{vendor.speak_topic}"     %></td>
+          <td><%= "#{vendor.speak_topic_ceu}" %></td>
+    	 </tr>
+      <% end %>
     </table>
   <% else %>
   	<h2>No vendors.</h2>

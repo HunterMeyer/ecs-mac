@@ -18,7 +18,7 @@ attendee = Attendee.create(
 	first_name:            'Attendee',
 	last_name:             'User',
 	email:                 'attendee@user.com',
-	phone:                 '5553211234',
+	phone:                 '3215551234',
 	address:               '123 Long St.',
 	city:                  'Orlando',
 	state:                 'Florida',
@@ -33,7 +33,7 @@ vendor = Vendor.create(
 	last_name:             'User',
 	vendor_name:           'ProtectorAll',
 	email:                 'vendor@user.com',
-	phone:                 '5557209876',
+	phone:                 '7205559876',
 	address:               '321 Small St.',
 	city:                  'Orlando',
 	state:                 'Florida',
@@ -41,4 +41,19 @@ vendor = Vendor.create(
 	comments:              'Looking forward to the event',
 	speak_topic:           true,
 	speak_topic_ceu:       true
+	)
+
+vendor = Vendor.create(
+	first_name:            'Jim',
+	last_name:             'Henson',
+	vendor_name:           'Muppet Babies',
+	email:                 'jim@muppets.com',
+	phone:                 '7135558080',
+	address:               '1500 21st St. #341',
+	city:                  'Brooklyn',
+	state:                 'New York',
+	zip:                   '81173',
+	comments:              'Hey, get you hand out my pocket',
+	speak_topic:           true,
+	speak_topic_ceu:       false
 	)

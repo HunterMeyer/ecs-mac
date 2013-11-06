@@ -88,7 +88,6 @@ p {
   background-color: $darkGreen;
   background-image: none;
   border: none;
-  /*border-bottom: 1px solid white;*/
 }
 
 .navbar-inverse .brand, .navbar-inverse .nav > li > a {
@@ -276,31 +275,6 @@ span.vendor-info {
   margin-bottom: 5px;
 }
 
-/* Lecture Button */
-.lecture-button {
-  display: inline-block;
-  margin: 0 auto;
-  margin-top: 30px;
-  width: 320px;
-  height: 50px;
-  font-size: 20px;
-  line-height: 45px;
-  background-color: $brightBlue;
-  border-radius: 3px;
-  a {
-    display: block;
-    color: white;
-    width: 320px;
-    height: 50px;
-  }
-  a:hover, a:focus {
-    border-radius: 3px;
-    background-color: $blueHover;
-    text-decoration: none;
-    outline: none;
-  }
-}
-
 /* Forms */
 .forms {
   margin-top: 30px;
@@ -347,6 +321,13 @@ textarea.dropshadow {
     color: $brightOrange;
   }
 }
+
+/* Tables */
+th.orange {
+  background-color: $brightOrange !important;
+  border: none !important;
+}
+
 
 /* Footer */
 footer {
