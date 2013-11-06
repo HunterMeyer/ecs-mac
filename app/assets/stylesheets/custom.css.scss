@@ -6,6 +6,7 @@ $greyBackground: #F5F5F5;
 $darkGreen: #097054;
 $lightGreen: #C5DBD5;
 $brightOrange: #D89C41;
+$lightOrange: #EBDCC6;
 $brightBlue: #FF9900;
 $blueHover: #0D91E9;
 
@@ -188,6 +189,17 @@ p {
   margin-top: 10px;
 }
 
+span.card-header {
+  display: block;
+  background-color: $darkGreen;
+  color: white;
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 10px;
+  border-top-right-radius: 7px;
+  border-top-left-radius: 7px;
+}
+
 /* Information Cards */
 .card {
   border-bottom: 1px solid #999;
@@ -201,17 +213,6 @@ div.tall {
   margin-top: 2%;
   width: 35%;
   float: right;
-}
-
-span.card-header {
-  display: block;
-  background-color: $darkGreen;
-  color: white;
-  text-align: center;
-  font-size: 1.5rem;
-  padding: 10px;
-  border-top-right-radius: 7px;
-  border-top-left-radius: 7px;
 }
 
 div.wide {
@@ -242,6 +243,11 @@ span.more-info {
   padding-top: 3px;
 }
 
+span.vendor-info {
+  display: block;
+  margin-bottom: 5px;
+}
+
 /* Lecture Button */
 .lecture-button {
   display: inline-block;
@@ -268,6 +274,10 @@ span.more-info {
 }
 
 /* Forms */
+.forms {
+  margin-top: 30px;
+}
+
 form.span4 {
   margin-left: 15px;
   display: inline-block;
@@ -275,6 +285,22 @@ form.span4 {
 
 .form {
   margin-top: 15px;
+}
+
+.orange {
+  background-color: $lightOrange !important;
+}
+
+.form-header {
+  display: block;
+  background-color: $brightOrange;
+  color: white;
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 10px;
+  border-top-right-radius: 7px;
+  border-top-left-radius: 7px;
+
 }
 
 .inline-check {
