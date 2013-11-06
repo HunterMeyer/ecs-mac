@@ -1,11 +1,28 @@
-<h1>Attendees</h1>
+<div class='container'>
+  <h1>Attendees</h1>
 
-<% if @attendees.any? %>
-	<% @attendees.each do |attendee| %>
-		<strong><%= "#{attendee.first_name} #{attendee.last_name}" %></strong>
-		<small><%= "#{attendee.industry}" %></small>
-		<small><%= "#{attendee.email} #{attendee.phone}" %></small>
-	<% end %>
-<% else %>
-	<h2>No attendees.</h2>
-<% end %>
+  <% if @attendees.any? %>
+  	<table class='table table-striped'>
+      <tr>
+        <th class='orange'>First Name</th>
+        <th class='orange'>Last Name</th>
+        <th class='orange'>Email</th>
+        <th class='orange'>Phone</th>
+        <th class='orange'>Industry</th>
+        <th class='orange'>Pull Out</th>
+      </tr>
+      <% @attendees.each do |attendee| %>
+    		<tr>
+          <td><%= "#{attendee.first_name}" %></td>
+          <td><%= "#{attendee.last_name}"  %></td>
+    	 	  <td><%= "#{attendee.email}"      %></td>
+    	   	<td><%= "#{attendee.phone}"      %></td>
+          <td><%= "#{attendee.industry}"   %></td>
+          <td><%= "#{attendee.pull_out}"   %></td>
+    	  </tr>
+      <% end %>
+    </table>
+  <% else %>
+    <h2>No attendees.</h2>
+  <% end %>
+</div>

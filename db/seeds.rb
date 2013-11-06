@@ -28,6 +28,20 @@ attendee = Attendee.create(
 	concerns:              'Beach front property'
 	)
 
+attendee = Attendee.create(
+	first_name:            'Richard',
+	last_name:             'Branson',
+	email:                 'richard@virgin.com',
+	phone:                 '4075559654',
+	address:               '1 Billionaire Row',
+	city:                  'Sarasota',
+	state:                 'Florida',
+	zip:                   '35566',
+	industry:              'Space Travel',
+	pull_out:              'Virgin Galactic',
+	concerns:              'Keeping my space ships clean'
+	)
+
 vendor = Vendor.create(
 	first_name:            'Vendor',
 	last_name:             'User',
