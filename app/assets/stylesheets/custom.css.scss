@@ -1,6 +1,5 @@
 @import 'bootstrap';
 
-
 /* Misc, Mixins, Etc */
 $greyHover: #c4c4c4;
 $greyBackground: #F5F5F5;
@@ -29,10 +28,6 @@ section {
 
 textarea {
   resize: vertical;
-}
-
-form.span4 {
-  margin-left: 0;
 }
 
 .center {
@@ -273,6 +268,15 @@ span.more-info {
 }
 
 /* Forms */
+form.span4 {
+  margin-left: 15px;
+  display: inline-block;
+}
+
+.form {
+  margin-top: 15px;
+}
+
 .inline-check {
   display: inline-block;
   line-height: 24px;

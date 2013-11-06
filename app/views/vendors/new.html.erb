@@ -1,41 +1,43 @@
 <div class='container'>
-	<h1>Vendor Sign Up</h1>
-	<form role='form' class='span4'>
-		<%= form_for @vendor do |f| %>
-			<div class='controls controls-row'>
-				<%= f.text_field  :vendor_name, placeholder: 'Vendor Name', autofocus: true, class: 'span4' %>
-			</div>
-			<div class='controls controls-row'>
-				<%= f.text_field  :first_name, placeholder: 'First Name', class: 'span2' %>
-				<%= f.text_field  :last_name,  placeholder: 'Last Name', class: 'span2' %>
-			</div>
-			<div class='controls controls-row'>
-			  <%= f.email_field :email, placeholder: 'Email', class: 'span2' %>
-				<%= f.text_field  :phone, placeholder: 'Phone Number', class: 'span2' %>
-			</div>
-			<div class='controls controls-row'>
-				<%= f.text_field  :address, placeholder: 'Street Address', class: 'span4' %>
-			</div>
-			<div class='controls controls-row'>
-				<%= f.text_field  :city, placeholder: 'City', class: 'span2' %>
-				<%= f.text_field  :state, placeholder: 'State', class: 'span1' %>
-				<%= f.text_field  :zip, placeholder: 'Zip', class: 'span1' %>
-			</div>
-			<div class='controls controls-row'>
-				<%= f.text_area   :comments, placeholder: 'Comments', class: 'span4', rows: '3' %>
-			</div>
-			<div class='checkbox-inline'>
-				<%= f.check_box :speak_topic, class: 'inline-check' %>
-				<%= f.label     :speak_topic, 'I\'m willing to speak on this topic', class: 'inline-check' %>
-			</div>
-			<div class='checkbox-inline'>
-				<%= f.check_box :speak_topic_ceu, class: 'inline-check' %>
-				<%= f.label     :speak_topic_ceu, 'I\'m willing to speak on this topic for CEU', class: 'inline-check' %>
-			</div>
-
-			<span class='pull-right'>
-				<%= f.submit 'Register', class: 'btn btn-primary' %>
-			</span>
-		<% end %>
-	</form>
+	<div class='tall card'>
+		<span class='card-header'>Vendor Sign Up</span>
+		<form role='form' class='form span4'>
+			<%= form_for @vendor do |f| %>
+				<div class='controls controls-row'>
+					<%= f.text_field  :vendor_name, placeholder: 'Vendor Name', autofocus: true, class: 'span4' %>
+				</div>
+				<div class='controls controls-row'>
+					<%= f.text_field  :first_name, placeholder: 'First Name', class: 'span2' %>
+					<%= f.text_field  :last_name,  placeholder: 'Last Name', class: 'span2' %>
+				</div>
+				<div class='controls controls-row'>
+				  <%= f.email_field :email, placeholder: 'Email', class: 'span2' %>
+					<%= f.text_field  :phone, placeholder: 'Phone Number', class: 'span2' %>
+				</div>
+				<div class='controls controls-row'>
+					<%= f.text_field  :address, placeholder: 'Street Address', class: 'span4' %>
+				</div>
+				<div class='controls controls-row'>
+					<%= f.text_field  :city, placeholder: 'City', class: 'span2' %>
+					<%= f.text_field  :state, placeholder: 'State', class: 'span1' %>
+					<%= f.text_field  :zip, placeholder: 'Zip', class: 'span1' %>
+				</div>
+				<div class='controls controls-row'>
+					<%= f.text_area   :comments, placeholder: 'Comments', class: 'span4', rows: '3' %>
+				</div>
+				<div class='checkbox-inline'>
+					<%= f.check_box :speak_topic, class: 'inline-check' %>
+					<%= f.label     :speak_topic, 'I\'m willing to speak on this topic', class: 'inline-check' %>
+				</div>
+				<div class='checkbox-inline'>
+					<%= f.check_box :speak_topic_ceu, class: 'inline-check' %>
+					<%= f.label     :speak_topic_ceu, 'I\'m willing to speak on this topic for CEU', class: 'inline-check' %>
+				</div>
+				<span class='pull-right'>
+					<%= f.submit 'Register', class: 'btn btn-primary' %>
+				</span>
+			<% end %>
+		</form>
+		</span>
+	</div>
 </div>
