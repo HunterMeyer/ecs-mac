@@ -1,37 +1,78 @@
-<div class='container'>
-	<form role='form' class='span4'>
-		<h1>Attendee Sign Up</h1>
-		<%= form_for @attendee do |f| %>
-			<div class='controls controls-row'>
-				<%= f.text_field  :first_name, placeholder: 'First Name', class: 'span2' %>
-				<%= f.text_field  :last_name,  placeholder: 'Last Name', class: 'span2' %>
-			</div>
-			<div class='controls controls-row'>
-			  <%= f.email_field :email, placeholder: 'Email', class: 'span2' %>
-				<%= f.text_field  :phone, placeholder: 'Phone Number', class: 'span2' %>
-			</div>
-			<div class='controls controls-row'>
-				<%= f.text_field  :address, placeholder: 'Street Address', class: 'span4' %>
-			</div>
-			<div class='controls controls-row'>
-				<%= f.text_field  :city, placeholder: 'City', class: 'span2' %>
-				<%= f.text_field  :state, placeholder: 'State', class: 'span1' %>
-				<%= f.text_field  :zip, placeholder: 'Zip', class: 'span1' %>
-			</div>
-			<div class='controls controls-row'>
-				<%= f.text_field  :industry, placeholder: 'Industry', class: 'span4' %>
-			</div>
-			<div class='controls controls-row'>
-				<%= f.text_field  :pull_out, placeholder: 'Pull Out', class: 'span4' %>
-			</div>
-			<div class='controls controls-row'>
-				<%= f.text_area   :questions, placeholder: 'Specific Quesions', class: 'span4', rows: '3' %>
-			</div>
-			<div class='controls controls-row'>
-				<%= f.text_area   :concerns, placeholder: 'Immediate Concerns', class: 'span4', rows: '3' %>
-			</div>
+<div class='forms container'>
+	<div class='tall orange card'>
+		<span class='form-header'>Attendee Sign Up</span>
+		<form role='form' class='form span4'>
+			<%= form_for @attendee do |f| %>
+				<div class='controls controls-row'>
+					<%= f.text_field  :first_name, placeholder: 'First Name', autofocus: true, class: 'span2' %>
+					<%= f.text_field  :last_name,  placeholder: 'Last Name', class: 'span2' %>
+				</div>
+				<div class='controls controls-row'>
+				  <%= f.email_field :email, placeholder: 'Email', class: 'span2' %>
+					<%= f.text_field  :phone, placeholder: 'Phone Number', class: 'span2' %>
+				</div>
+				<div class='controls controls-row'>
+					<%= f.text_field  :address, placeholder: 'Street Address', class: 'span4' %>
+				</div>
+				<div class='controls controls-row'>
+					<%= f.text_field  :city, placeholder: 'City', class: 'span2' %>
+					<%= f.text_field  :state, placeholder: 'State', class: 'span1' %>
+					<%= f.text_field  :zip, placeholder: 'Zip', class: 'span1' %>
+				</div>
+				<div class='controls controls-row'>
+					<%= f.text_field  :industry, placeholder: 'Industry', class: 'span4' %>
+				</div>
+				<div class='controls controls-row'>
+					<%= f.text_field  :pull_out, placeholder: 'Pull Out', class: 'span4' %>
+				</div>
+				<div class='controls controls-row'>
+					<%= f.text_area   :questions, placeholder: 'Specific Quesions', class: 'span4', rows: '3' %>
+				</div>
+				<div class='controls controls-row'>
+					<%= f.text_area   :concerns, placeholder: 'Immediate Concerns', class: 'span4', rows: '3' %>
+				</div>
 
-		  <span class='pull-right'><%= f.submit 'Register', class: 'btn btn-primary' %></span>
-		<% end %>
-	</form>
+			  <span class='pull-right'><%= f.submit 'Register', class: 'btn btn-primary' %></span>
+			<% end %>
+		</form>
+	</div>
+
+	<div class='wide card'>
+		<span class='quick-info'>
+			<span class='vendor-info'><i class='icon-chevron-right'></i>
+				Standard single spaces include a 6’ table (total space size 6x4) and 2 chairs.</span>
+			<span class='vendor-info'><i class='icon-chevron-right'></i>
+				Nothing shall be hung on venue walls.</span>
+			<span class='vendor-info'><i class='icon-chevron-right'></i>
+				You must furnish your own displays and set up materials.</span>
+			<span class='vendor-info'><i class='icon-chevron-right'></i>
+				Sponsorships opportunities will be available in program and at show.</span>
+			<span class='vendor-info'><i class='icon-chevron-right'></i>
+				Wi-Fi Available.</span>
+			<span class='vendor-info'><i class='icon-chevron-right'></i>
+				Electrical outlets available. Please inform if needed, when submitting booth deposit. Vendors responsible for bringing extension cords.</span>
+			<span class='vendor-info'><i class='icon-chevron-right'></i>
+				Set up will begin at 6am.</span>
+			<span class='vendor-info'><i class='icon-chevron-right'></i>
+				Space assignments at discretion of event host.</span>
+			<span class='vendor-info'><i class='icon-chevron-right'></i>
+				The exhibitor understands and agrees that neither the host, nor venue maintains insurance covering Vendor’s liability or property.</span>
+		</span>
+	</div>
+
+
+	<div class='wide card'>
+		<span class='quick-info'>
+			<span class='vendor-info'><i class='icon-chevron-right'></i>
+				Deposit required of $250 payable to Engineered Corrosion Solutions by 10/18/2013.</span>
+			<span class='vendor-info'><i class='icon-chevron-right'></i>
+				Remaining $750 booth cost due by 1/1/2014.</span>
+			<span class='vendor-info'><i class='icon-chevron-right'></i>
+				Please mail check to: 9021 Kostner Ave. Skokie, IL 60076.</span>
+		</span>
+	<div>
+</div>
+</div>
+</div>
+
 </div>
