@@ -299,6 +299,11 @@ input.dropshadow {
   box-shadow: inset 0px 1px 2px #464545;
 }
 
+textarea.dropshadow {
+  border: none;
+  box-shadow: inset 0px 1px 2px #464545;  
+}
+
 .orange {
   background-color: $lightOrange !important;
 }
@@ -330,7 +335,8 @@ input.dropshadow {
   font-size: 18px;
   border-radius: 3px;
   color: white;
-  &:hover {
+  &:hover, &:focus {
+    outline: none;
     background-color: white;
     color: $brightOrange;
   }
