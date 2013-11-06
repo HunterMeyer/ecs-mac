@@ -158,6 +158,23 @@ p {
   margin-top: 6px;
 }
 
+/* Event Info Cards */
+.big-info {
+  display: block;
+  font-size: 20px;
+  font-weight: bold;
+  padding-bottom: 2px;
+}
+
+.small-info {
+  display: block;
+  font-size: 18px;
+  padding-bottom: 10px;
+}
+
+.googlemap {
+  margin-top: 10px;
+}
 /* Information Cards */
 .card {
   border-bottom: 1px solid #999;
