@@ -169,7 +169,15 @@ p {
 .small-info {
   display: block;
   font-size: 18px;
-  padding-bottom: 10px;
+  padding-bottom: 5px;
+}
+
+.xsmall-info {
+  display: block;
+  font-size: 15px;
+  a:hover {
+    text-decoration: none;
+  }
 }
 
 .googlemap {
@@ -226,6 +234,7 @@ span.bold {
 
 span.more-info {
   display: block;
+  padding-top: 3px;
 }
 
 /* Lecture Button */
