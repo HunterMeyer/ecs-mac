@@ -168,25 +168,31 @@ p {
   display: block;
   font-size: 20px;
   font-weight: bold;
-  padding-bottom: 2px;
+  padding-bottom: 6px;
 }
 
 .small-info {
   display: block;
-  font-size: 18px;
-  padding-bottom: 5px;
+  font-size: 20px;
+  padding-bottom: 8px;
 }
 
 .xsmall-info {
   display: block;
-  font-size: 15px;
+  font-size: 16px;
   a:hover {
     text-decoration: none;
   }
 }
 
 .googlemap {
-  margin-top: 10px;
+  margin-top: 20px;
+}
+
+.map {
+  border-radius: 3px;
+  width: 90%;
+  height: 90%;
 }
 
 span.card-header {
