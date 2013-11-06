@@ -4,12 +4,11 @@
 	<% if @admins.any? %>
 		<% @admins.each do |admin| %>
 			<strong><%= "#{admin.first_name} #{admin.last_name}" %></strong>
-			<small><%= "#{admin.email} #{admin.role}" %></small>
+			<small><%= "#{admin.email}" %></small>
 		<% end %>
 	<% else %>
 		<h2>No admins.</h2>
 	<% end %>
-	<%= link_to 'Create Admin', new_admin_path %>
 <% else %>
   <h3>Oops. You don't have permission to view this page</h3>
   <%= link_to 'Back', root_path %>
