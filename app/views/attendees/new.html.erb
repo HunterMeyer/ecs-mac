@@ -38,9 +38,7 @@
 					<%= f.text_area   :concerns, placeholder: 'Immediate Concerns', class: 'span4 dropshadow', rows: '3' %>
 				</div>
 			  <span class='pull-right'>
-			  	<%= f.button :submit, class: 'btn btn-primary' do %>
-			   		<i class='icon-user icon-white'></i> Register
-			   	<% end %>
+			  	<%= f.submit 'Register', class: 'btn btn-primary' %>
 			 	</span>
 			<% end %>
 		</form>

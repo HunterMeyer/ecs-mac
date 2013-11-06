@@ -1,11 +1,15 @@
-<h1>Vendors</h1>
+<div class='center container'>
+  <h1>Vendors</h1>
 
-<% if @vendors.any? %>
-	<% @vendors.each do |vendor| %>
-		<strong><%= "#{vendor.first_name} #{vendor.last_name}" %></strong>
-		<small><%= "#{vendor.vendor_name}" %></small>
-		<small><%= "#{vendor.email} #{vendor.phone}" %></small>
-	<% end %>
-<% else %>
-	<h2>No vendors.</h2>
-<% end %>
+  <% if @vendors.any? %>
+  	<table>
+      <% @vendors.each do |vendor| %>
+    		<strong><%= "#{vendor.first_name} #{vendor.last_name}" %></strong>
+    		<small><%= "#{vendor.vendor_name}" %></small>
+    		<small><%= "#{vendor.email} #{vendor.phone}" %></small>
+    	<% end %>
+    </table>
+  <% else %>
+  	<h2>No vendors.</h2>
+  <% end %>
+</div>
