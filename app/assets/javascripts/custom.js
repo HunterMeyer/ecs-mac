@@ -4,6 +4,13 @@ $(document).on('page:load', function() {
   }, function() {
     $(this).children().addClass('icon-white');
   });
+
+  $('.btn-primary').hover(function() {
+    $(this).children().removeClass('icon-white');
+  }, function() {
+    $(this).children().addClass('icon-white');
+  });
+
 });
 
 $(document).ready(function() {
@@ -12,4 +19,11 @@ $(document).ready(function() {
   }, function() {
     $(this).children().addClass('icon-white');
   });
+
+  $('.btn-primary').hover(function() {
+    $(this).children().removeClass('icon-white');
+  }, function() {
+    $(this).children().addClass('icon-white');
+  });
+  
 });

@@ -1,6 +1,12 @@
+<div class='small-banner'>
+	<span class='welcome'>Thank you for Participating in the<span>
+	<span class='brand-name'>First Annual</span>
+	<span class='brand-name'>Engineered Corrosion Solutions Trade Show!</span>
+</div>
+
 <div class='forms container'>
-	<div class='tall orange card'>
-		<span class='form-header'>Attendee Sign Up</span>
+	<div class='tall card'>
+		<span class='card-header'>Attendee Sign Up</span>
 		<form role='form' class='form span4'>
 			<%= form_for @attendee do |f| %>
 				<div class='controls controls-row'>
@@ -31,8 +37,11 @@
 				<div class='controls controls-row'>
 					<%= f.text_area   :concerns, placeholder: 'Immediate Concerns', class: 'span4 dropshadow', rows: '3' %>
 				</div>
-
-			  <span class='pull-right'><%= f.submit 'Register', class: 'btn btn-primary' %></span>
+			  <span class='pull-right'>
+			  	<%= f.button :submit, class: 'btn btn-primary' do %>
+			   		<i class='icon-user icon-white'></i> Register
+			   	<% end %>
+			 	</span>
 			<% end %>
 		</form>
 	</div>

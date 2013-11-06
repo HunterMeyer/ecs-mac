@@ -1,6 +1,12 @@
+<div class='small-banner'>
+	<span class='welcome'>Thank you for Participating in the<span>
+	<span class='brand-name'>First Annual</span>
+	<span class='brand-name'>Engineered Corrosion Solutions Trade Show!</span>
+</div>
+
 <div class='forms container'>
-	<div class='tall orange card'>
-		<span class='form-header'>Vendor Sign Up</span>
+	<div class='tall card'>
+		<span class='card-header'>Vendor Sign Up</span>
 		<form role='form' class='form span4'>
 			<%= form_for @vendor do |f| %>
 				<div class='controls controls-row'>
@@ -34,8 +40,10 @@
 					<%= f.label     :speak_topic_ceu, 'I\'m willing to speak on this topic for CEU', class: 'inline-check' %>
 				</div>
 				<span class='pull-right'>
-					<%= f.submit 'Register', class: 'btn btn-primary' %>
-				</span>
+			  	<%= f.button :submit, class: 'btn btn-primary' do %>
+			   		<i class='icon-user icon-white'></i> Register
+			   	<% end %>
+			 	</span>
 			<% end %>
 		</form>
 		</span>
