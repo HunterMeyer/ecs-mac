@@ -293,6 +293,12 @@ form.span4 {
   margin-top: 15px;
 }
 
+input.dropshadow {
+  height: 24px;
+  border: none;
+  box-shadow: inset 0px 1px 2px #464545;
+}
+
 .orange {
   background-color: $lightOrange !important;
 }
