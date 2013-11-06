@@ -1,30 +1,31 @@
 <h1>Attendee Sign Up</h1>
+<div class='center container'>
+	<%= form_for @attendee do |f| %>
+		<%= f.label       :first_name %>
+		<%= f.text_field  :first_name, autofocus: true %>
+	  <%= f.label       :last_name %>
+		<%= f.text_field  :last_name %>
+		<%= f.label	      :phone, 'Phone Number' %>
+		<%= f.text_field  :phone %>
+		<%= f.label       :email %>
+	  <%= f.email_field :email %>
+		<%= f.label       :address, 'Street Address' %>
+		<%= f.text_field  :address %>
+		<%= f.label       :city %>
+		<%= f.text_field  :city %>
+		<%= f.label       :state %>
+		<%= f.text_field  :state %>
+		<%= f.label       :zip, 'Zip Code' %>
+		<%= f.text_field  :zip %>
+		<%= f.label       :industry %>
+		<%= f.text_field  :industry %>
+		<%= f.label       :pull_out %>
+		<%= f.text_field  :pull_out %>
+		<%= f.label       :concerns %>
+		<%= f.text_area   :concerns %>
+		<%= f.label       :questions %>
+		<%= f.text_area   :questions %>
 
-<%= form_for @attendee do |f| %>
-	<%= f.label       :first_name %>
-	<%= f.text_field  :first_name, autofocus: true %>
-  <%= f.label       :last_name %>
-	<%= f.text_field  :last_name %>
-	<%= f.label	      :phone, 'Phone Number' %>
-	<%= f.text_field  :phone %>
-	<%= f.label       :email %>
-  <%= f.email_field :email %>
-	<%= f.label       :address, 'Street Address' %>
-	<%= f.text_field  :address %>
-	<%= f.label       :city %>
-	<%= f.text_field  :city %>
-	<%= f.label       :state %>
-	<%= f.text_field  :state %>
-	<%= f.label       :zip, 'Zip Code' %>
-	<%= f.text_field  :zip %>
-	<%= f.label       :industry %>
-	<%= f.text_field  :industry %>
-	<%= f.label       :pull_out %>
-	<%= f.text_field  :pull_out %>
-	<%= f.label       :concerns %>
-	<%= f.text_area   :concerns %>
-	<%= f.label       :questions %>
-	<%= f.text_area   :questions %>
-
-  <span class='button' style='display: block;'><%= f.submit 'Register' %></span>
-<% end %>
+	  <span class='button' style='display: block;'><%= f.submit 'Register', class: 'btn btn-primary' %></span>
+	<% end %>
+</div>
