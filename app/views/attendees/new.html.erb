@@ -8,8 +8,9 @@
 <div class='forms container'>
 	<div class='tall card'>
 		<span class='card-header'>Attendee Sign Up</span>
-		<form role='form' class='form span4'>
+		<div class='form span4'>
 			<%= form_for @attendee do |f| %>
+				<%= render 'attendees/attendee_error_messages' %>
 				<div class='controls controls-row'>
 					<%= f.text_field  :first_name, placeholder: 'First Name', autofocus: true, class: 'span2 dropshadow' %>
 					<%= f.text_field  :last_name,  placeholder: 'Last Name', class: 'span2 dropshadow' %>
@@ -42,7 +43,7 @@
 			  	<%= f.submit 'Register', class: 'btn btn-primary' %>
 			 	</span>
 			<% end %>
-		</form>
+		</div>
 	</div>
 
 	<div class='wide card'>

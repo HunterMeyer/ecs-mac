@@ -1,8 +1,8 @@
 Ecs::Application.routes.draw do
   devise_for :admins
   resources  :admins
-  resources  :attendees, only: [:index, :create, :new]
-  resources  :vendors,   only: [:index, :create, :new]
+  resources  :attendees
+  resources  :vendors
 
   root 'static_pages#index'
 
