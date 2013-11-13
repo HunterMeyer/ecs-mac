@@ -1,6 +1,7 @@
 class VendorsController < ApplicationController
   def index
   	@vendors = Vendor.all
+    authorize! :read, @vendors
   end
 
   def show

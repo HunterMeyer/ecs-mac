@@ -1,6 +1,7 @@
 class AttendeesController < ApplicationController
   def index
-  	@attendees = Attendee.all
+    @attendees = Attendee.all
+    authorize! :read, @attendees
   end
 
   def show
