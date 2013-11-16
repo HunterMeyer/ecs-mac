@@ -16,7 +16,7 @@ class AttendeesController < ApplicationController
     @attendee = Attendee.new(attendee_params)
     if @attendee.save 
       flash[:success] = 'Thanks for signing up!'
-      redirect_to root_path
+      redirect_to @attendee
     else
       render 'new'
     end

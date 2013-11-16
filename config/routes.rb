@@ -1,4 +1,5 @@
 Ecs::Application.routes.draw do
+  get "payment_notifications/create"
   devise_for :admins
   resources  :admins
   resources  :attendees
