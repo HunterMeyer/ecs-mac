@@ -13,7 +13,7 @@ class LecturesController < ApplicationController
 			flash[:success] = 'Thanks for the input.'
 			redirect_to lectures_path
 		else
-			render 'lectures'
+			render 'new'
 		end
 	end
 

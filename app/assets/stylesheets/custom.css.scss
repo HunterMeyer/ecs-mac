@@ -40,6 +40,12 @@ textarea {
   }
 }
 
+div.alert {
+  margin-bottom: 0;
+  padding: 14px 35px 8px 14px;
+  border-radius: 0;
+}
+
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
   line-height: 1;
@@ -312,16 +318,8 @@ span.more-info {
 }
 
 /* Forms */
-.forms {
-  margin-top: 30px;
-}
-
-form.span4 {
-  margin-left: 15px;
-  display: inline-block;
-}
-
 .form {
+  margin-left: 16px;
   margin-top: 15px;
 }
 
@@ -351,6 +349,7 @@ textarea.dropshadow {
   font-size: 19px;
   border-radius: 3px;
   color: white;
+  margin-bottom: 10px;
   &:hover, &:focus {
     outline: none;
     background-color: white;
