@@ -5,8 +5,26 @@
   <span class='limited-space'>(some eligible for CEUs)</span>
 </div>
 <%= render 'layouts/sponsor' %>
-<div class='container'>
-  <div class='fullwide card'>
+<div class='forms container'>
+  <div class='tall card'>
+    <span class='card-header'>Suggest a Lecture</span>
+    <div class='form span4'>
+      <%= form_for @lecture do |f| %>
+        <%= render 'lectures_error_messages' %>
+        <div class='controls controls-row'>
+          <%= f.email_field  :email, placeholder: 'your@email.com', autofocus: true, class: 'span4 dropshadow' %>
+        </div>
+        <div class='controls controls-row'>
+          <%= f.text_field  :topic,  placeholder: 'Suggest a new topic...', class: 'span4 dropshadow' %>
+        </div>
+        <span class='pull-right'>
+          <%= f.submit 'Suggest', class: 'btn btn-primary' %>
+        </span>
+      <% end %>
+    </div>
+  </div>
+  
+  <div class='wide card'>
     <span class='quick-info'>
       <span class='more-info bold'>Lectures:</span>
       <span class='more-info'><i class='icon-chevron-right'></i>
@@ -27,6 +45,6 @@
         The importance of third party inspection services and what they entail.</span>
     </span>
   </div>
-</div>
+
 </div>
 </div>

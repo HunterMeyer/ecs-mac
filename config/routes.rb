@@ -4,9 +4,10 @@ Ecs::Application.routes.draw do
   resources  :admins
   resources  :attendees
   resources  :vendors
+  resources  :lectures, only: [:create, :new]
 
   root 'static_pages#index'
   match '/payment_notifications', to: 'payment_notifications#create', via: 'post'
-  match '/faq',       to: 'static_pages#faq',             via: 'get'
-  match '/lectures',  to: 'static_pages#lectures',        via: 'get'
+  match '/faq',                   to: 'static_pages#faq',             via: 'get'
+  match '/lectures',              to: 'lectures#new',                 via: 'get'
 end
