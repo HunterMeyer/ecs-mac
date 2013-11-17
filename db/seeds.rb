@@ -40,8 +40,7 @@ attendee = Attendee.create(
 	zip:                   '35566',
 	industry:              'Space Travel',
 	pull_out:              'Virgin Galactic',
-	concerns:              'Keeping my space ships clean',
-	paid:                  Time.now
+	concerns:              'Keeping my space ships clean'
 	)
 
 vendor = Vendor.create(

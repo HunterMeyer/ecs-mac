@@ -21,8 +21,12 @@
     	   	<td><%= "#{attendee.phone}"      %></td>
           <td><%= "#{attendee.industry}"   %></td>
           <td><%= "#{attendee.pull_out}"   %></td>
-          <td><%= "#{attendee.paid}"       %></td>
-    	  </tr>
+          <% if attendee.paid %>
+            <td><%= attendee.paid.strftime("%m-%d-%Y") %></td>
+    	    <% else %>
+            <td></td>
+          <% end %>
+        </tr>
       <% end %>
     </table>
   <% else %>
