@@ -7,7 +7,7 @@ class PaymentNotification < ActiveRecord::Base
 
 	def mark_attendee_paid
 		if status == 'Completed'
-			attendee.update(:paid, Time.now)
+			attendee.update_attribute(:paid, Time.now)
 		end
 	end
 end

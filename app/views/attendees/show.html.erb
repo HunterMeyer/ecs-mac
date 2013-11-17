@@ -9,8 +9,8 @@
 	<input type="hidden" name="amount" value="1.00">
 	<input type="hidden" name="currency_code" value="USD">
 	<input type="hidden" name="button_subtype" value="services">
-	<input type="hidden" name="invoice" value=@attendee.id>
-	<input type="hidden" name="notify_url" value="#{payment_notifications_path}">
+	<%= hidden_field_tag 'invoice', @attendee.id %>
+	<%= hidden_field_tag 'notify_url', payment_notifications_path %>
 	<input type="hidden" name="bn" value="PP-BuyNowBF:btn_paynowCC_LG.gif:NonHosted">
 	<input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_paynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
 	<img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
