@@ -3,10 +3,11 @@ class UserMailer < ActionMailer::Base
 
   def welcome_email(user)
     @user = user
-    @url  = 'http://example.com/login'
+    @url  = 'http://rails-ecs.herokuapp.com'
     mail(
-      to: @user.email
-      
+      to: @user.email,
+      subject: 'Welcome to Engineered Corrusion Solutions 2014'
+
       )
   end
 end
