@@ -3,8 +3,10 @@ class PaymentNotificationsController < ApplicationController
 
   def create
   	PaymentNotification.create!(:params => params, :attendee_id => params[:invoice], :status => params[:payment_status], :transaction_id => params[:txn_id])
-  	attendee = Attendee.find(params[:invoice])
-  	attendee.update_attribute(:paid, Time.now)
-  	render :nothing => true
+  	if params[:payment_status] == 'Complete'
+      attendee = Attendee.find(params[:invoice])
+  	  attendee.update_attribute(:paid, Time.now)
+  	end
+    redirect_to reg_success_path
   end
 end

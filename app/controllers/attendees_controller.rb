@@ -15,7 +15,6 @@ class AttendeesController < ApplicationController
   def create
     @attendee = Attendee.new(attendee_params)
     if @attendee.save 
-      flash[:success] = 'Thanks for signing up!'
       UserMailer.welcome_email(@attendee).deliver
       redirect_to @attendee
     else
