@@ -8,7 +8,6 @@ class UserMailer < ActionMailer::Base
     mail(
       to: email_with_name,
       subject: 'Welcome to Engineered Corrusion Solutions 2014'
-
       )
   end
 end
