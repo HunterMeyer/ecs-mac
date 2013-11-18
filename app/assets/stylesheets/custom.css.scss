@@ -75,14 +75,19 @@ p {
 }
 
 /* Header */
+.logo-top {
+  margin-top: 6px;
+  margin-bottom: -27px;
+}
+
 #logo {
   float: left;
   margin-right: 10px;
-  font-size: 1.7em;
+  font-size: 30px;
   color: white;
   font-family: Montserrat Alternates, sans-serif;
   letter-spacing: -1px;
-  padding-top: 9px;
+  padding-top: 11px;
   font-weight: bold;
   &:hover, &:focus {
     text-decoration: none;
@@ -108,25 +113,22 @@ p {
 }
 
 /* Sponsor Banner */
-.sponsor-wrapper {
-  margin-top: 20px;
-}
-
-.sponsor-text {
+.assoc {
   display: block;
-  font-size: 12px;
-  color: #999;
-  margin-bottom: 5px;
+  color: #9B9B9B;
+  font-size: 11px;
 }
 
-.sponsor-link {
-  color: rgb(0, 129, 199);
-  font-family: Trebuchet, Trebuchet MS, Arial;
-  font-size: 35px;
+.sponsor a {
+  display: block;
+  color: #74B1DA;
+  font-size: 20px;
+  margin-top: -5px;
+  text-shadow: 0px 1px 1px black;
   &:hover, &:focus {
+    outline: 0;
     text-decoration: none;
-    outline: none;
-    color: rgb(30, 98, 172);
+    color: #93C4E5;
   }
 }
 
@@ -157,20 +159,30 @@ p {
 
 .welcome {
   display: block;
+  padding-top: 25px;
+  font-size: 20px;
+  text-shadow: 0px 1px 1px black;
+}
+
+.above-brand {
+  display: block;
+  padding-top: 82px;
+  font-size: 40px;
+  text-shadow: 0px 1px 1px black;
+}
+
+.brand {
+  display: block;
   padding-top: 40px;
-  font-size: 35px;
+  font-size: 40px;
+  text-shadow: 0px 1px 1px black;
 }
 
 .brand-name {
   display: block;
-  padding-top: 30px;
-  font-size: 45px;
-}
-
-.limited-space {
-  display: block;
-  padding-top: 40px;
-  font-size: 30px;
+  padding-top: 82px;
+  font-size: 40px;
+  text-shadow: 0px 1px 1px black;
 }
 
 /* Signup Buttons */
@@ -305,6 +317,17 @@ span.bold {
 span.more-info {
   display: block;
   padding-top: 5px;
+}
+
+span.speaker {
+  display: block;
+  margin-left: 18px;
+  font-size: 12px;
+  color: black;
+}
+
+span.soft {
+  color: gray;
 }
 
 /* Forms */

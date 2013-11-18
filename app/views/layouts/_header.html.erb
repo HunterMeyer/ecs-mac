@@ -1,7 +1,15 @@
 <header class='navbar navbar-fixed-top navbar-inverse'>
   <div class='navbar-inner'>
     <div class='container'>
-      <%= link_to 'ECS | 2014', root_path, id: 'logo' %>
+      <div class='logo-top'>
+        <%= link_to 'ECS | 2014', root_path, id: 'logo' %>
+        <span class='sponsor'>
+          <span class='assoc'>In asssociation with</span>
+          <a href='http://www.chicagocoatingsgroup.com/' alt='CCG' target='_blank'>
+            <span class='link'>Chicago Coatings Group</span>
+          </a>
+        </span>
+      </div>
       <nav>
         <ul class='nav pull-right'>
           <li><%= link_to 'Home',           root_path %></li>
@@ -13,7 +21,6 @@
               <ul class='dropdown-menu'>
                 <li><%= link_to 'Attendees',    attendees_path %></li>
                 <li><%= link_to 'Vendors',      vendors_path %></li>
-                <li><%= link_to 'Admins',       admins_path %></li>
                 <li class='divider'></li>
                 <li><%= link_to 'Logout',       destroy_admin_session_path, method: :delete %> </li>
               </ul>
