@@ -16,6 +16,7 @@ class VendorsController < ApplicationController
     @vendor = Vendor.new(vendor_params)
     if @vendor.save 
       flash[:success] = 'Thanks for signing up!'
+      UserMailer.welcome_email(@vendor).deliver
       redirect_to root_path
     else
       render 'new'
