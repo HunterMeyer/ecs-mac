@@ -6,10 +6,10 @@ Ecs::Application.initialize!
 ActionMailer::Base.delivery_method = :smtp
 ActionMailer::Base.smtp_settings = {
   address:              'smtp.gmail.com',
-  port:                 465,
+  port:                 587,
   domain:               'gmail.com',
   user_name:            'hunnafresh@gmail.com',
   password:             'triple666',
-  authentication:       'plain',
+  authentication:       :login,
   enable_starttls_auto: true  
 }
