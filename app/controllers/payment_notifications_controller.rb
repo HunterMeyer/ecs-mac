@@ -7,6 +7,6 @@ class PaymentNotificationsController < ApplicationController
       attendee = Attendee.find(params[:invoice])
   	  attendee.update_attribute(:paid, Time.now)
   	end
-    redirect_to reg_success_path
+    render nothing: true
   end
 end
