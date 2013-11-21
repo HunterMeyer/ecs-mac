@@ -4,6 +4,12 @@
   <span class='brand'>Engineered Corrosion Solutions 2014</span>
 </div>
 
+<div class='center container'>
+  <% flash.each do |key, value| %>
+    <div class='alert alert-<%= key %>'><%= value %></div>
+  <% end %>
+</div>
+
 <div class='container'>
   <div class='tall card'>
     <span class='card-header'>Suggest a Lecture</span>

@@ -42,7 +42,7 @@ textarea {
 
 div.alert {
   margin-bottom: 0;
-  padding: 14px 35px 8px 14px;
+  padding: 6px 35px 8px 14px  ;
   border-radius: 0;
 }
 
@@ -331,8 +331,10 @@ span.soft {
 }
 
 /* Forms */
-.form {
-  margin-left: 16px;
+div.form {
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
   margin-top: 15px;
 }
 

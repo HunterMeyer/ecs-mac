@@ -16,7 +16,7 @@ class VendorsController < ApplicationController
     @vendor = Vendor.new(vendor_params)
     if @vendor.save
       UserMailer.welcome_email(@vendor).deliver
-      redirect_to reg_success_path
+      redirect_to vendor_success_path
     else
       render 'new'
     end

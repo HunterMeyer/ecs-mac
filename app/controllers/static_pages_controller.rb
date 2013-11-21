@@ -8,6 +8,6 @@ class StaticPagesController < ApplicationController
   def faq
   end
 
-  def reg_success
+  def vendor_success
   end
 end

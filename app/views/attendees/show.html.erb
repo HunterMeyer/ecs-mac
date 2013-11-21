@@ -1,18 +1,49 @@
 <% provide(:title, "Regisgtration #{@attendee.first_name}") %>
-<h2>Pay Registration</h2>
-<div class='center'>
-	<form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-	<input type="hidden" name="cmd" value="_xclick">
-	<input type="hidden" name="business" value="MBBUCK6UUHEVJ">
-	<input type="hidden" name="lc" value="US">
-	<input type="hidden" name="item_name" value="Attendee Registration">
-	<input type="hidden" name="amount" value="1.00">
-	<input type="hidden" name="currency_code" value="USD">
-	<input type="hidden" name="button_subtype" value="services">
-	<%= hidden_field_tag 'invoice', @attendee.id %>
-	<%= hidden_field_tag 'notify_url', 'http://rails-ecs.herokuapp.com/payment_notifications' %>
-	<input type="hidden" name="bn" value="PP-BuyNowBF:btn_paynowCC_LG.gif:NonHosted">
-	<input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_paynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-	<img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
-	</form>
+<div class='small-banner'>
+	<span class='above-brand'>Thank you for Participating in <span>
+	<span class='brand'>Engineered Corrosion Solutions 2014</span>
+</div>
+
+<div class='container'>
+	<div class='tall card'>
+		<span class='card-header'>Pay Registration</span>
+		<div class='form span4'>
+			<form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+				<input type="hidden" name="cmd" value="_xclick">
+				<input type="hidden" name="business" value="MBBUCK6UUHEVJ">
+				<input type="hidden" name="lc" value="US">
+				<input type="hidden" name="item_name" value="Attendee Registration">
+				<input type="hidden" name="amount" value="1.00">
+				<input type="hidden" name="currency_code" value="USD">
+				<input type="hidden" name="button_subtype" value="services">
+				<%= hidden_field_tag 'invoice', @attendee.id %>
+				<%= hidden_field_tag 'notify_url', 'http://rails-ecs.herokuapp.com/payment_notifications' %>
+				<input type="hidden" name="bn" value="PP-BuyNowBF:btn_paynowCC_LG.gif:NonHosted">
+				<input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_paynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+				<img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+			</form>
+		</div>
+		</span>
+	</div>
+
+	<div class='wide card'>
+		<span class='quick-info'>
+			<span class='more-info bold'>Payment required:</span>
+			<span class='more-info' style='color: red;'><i class='icon-chevron-right'></i>
+				Registration incomplete, please pay fee via PayPal.</span>
+		</span>
+	</div>
+
+	<div class='wide card'>
+		<span class='quick-info'>
+			<span class='more-info bold'>Email:</span>
+			<span class='more-info'><i class='icon-chevron-right'></i>
+				You will receive an email shortly confirming your registration.</span>
+			<span class='more-info'><i class='icon-chevron-right'></i>
+				After payment is complete you'll recievie an email with you receipt.</span> 
+		</span>
+	</div>
+
+</div>
+</div>
 </div>

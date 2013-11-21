@@ -11,5 +11,5 @@ Ecs::Application.routes.draw do
   match '/faq',                   to: 'static_pages#faq',             via: 'get'
   match '/lectures',              to: 'lectures#new',                 via: 'get'
   match '/current_vendors',       to: 'static_pages#vendors',         via: 'get'
-  match '/reg_success',           to: 'static_pages#reg_success',     via: 'get'
+  match '/vendor_success',        to: 'static_pages#vendor_success',  via: 'get'
 end
