@@ -189,7 +189,7 @@ p {
 .signup-button {
   display: inline-block;
   margin: 0 auto;
-  margin-top: 30px;
+  /*margin-top: 30px;*/
   width: 150px;
   height: 50px;
   font-size: 20px;
@@ -265,6 +265,17 @@ span.card-header {
   border-bottom: 1px solid #999;
   border-radius: 7px;
   font-size: 0.9rem;
+}
+
+.tall-outer {
+  display: inline-block;
+  float: right;
+  width: 35%;
+}
+
+div.tall-inner {
+  background-color: $lightGreen;
+  margin-top: 5%;
 }
 
 div.tall {

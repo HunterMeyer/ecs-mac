@@ -1,37 +1,44 @@
 <div class='banner'>
-	<span class='brand-name'>Engineered Corrosion Solutions 2014</span>
-	<span class='welcome'>A unique conference <br> focusing on the fundamentals of corrosion from an economic and technical perspective</span>
-	<!-- <div class='sponsor-wrapper'>
-		<span class='sponsor-text'>In Association with:</span>  
-	  <a class='sponsor-link' href='http://www.chicagocoatingsgroup.com/' target='_blank'>
-	  	Chicago Coatings Group
-	  </a>
-	</div> -->
-	<div class='signup-button' id='vendor'>
-		<%= link_to '<i class="icon-user icon-white"></i> Vendor'.html_safe, new_vendor_path, class: 'button-link' %>
-	</div>
-	<div class='signup-button' id='attendee'>
-		<%= link_to '<i class="icon-user icon-white"></i> Attendee'.html_safe, new_attendee_path, class: 'button-link' %>
-	</div>
-
 </div>
 
 <div class='center container'>
 
-	<div class='tall card'>
-		<span class='card-header'>Event Info</span>
-		<span class='main-info'>
-			<span class='big-info'>Thursday, March 13, 2014</span>
-			<span class='small-info'>9am - 5pm</span>
-			<span class='big-info'>Doubletree Hilton Hotel</span>
-			<span class='small-info'>9599 Skokie Blvd.<br>Skokie, IL 60776</span>
-			<span class='xsmall-info'><a href='http://doubletree3.hilton.com/en/hotels/illinois/doubletree-by-hilton-hotel-chicago-north-shore-conference-center-CHICCDT/index.html' target='_blank'><i class='icon-share'></i> Website</a>
+	<div class='tall-outer'>
+		<div class='tall-inner card'>
+			<span class='card-header'>Sign Up</span>
+			<span class='main-info'>
+				<div class='signup-button' id='vendor'>
+					<%= link_to '<i class="icon-user icon-white"></i> Vendor'.html_safe, new_vendor_path, class: 'button-link' %>
+				</div>
+				<div class='signup-button' id='attendee'>
+					<%= link_to '<i class="icon-user icon-white"></i> Attendee'.html_safe, new_attendee_path, class: 'button-link' %>
+				</div>
 			</span>
-			<div class='googlemap'>
-				<%= link_to 'http://goo.gl/maps/7pwbd', target: '_blank' do %>
-					<img class='map' src='https://googledrive.com/host/0BzGPB-VGfaP5bS0tU0FBeFE5UWc/map2.png'>
-				<% end %>
-			</div>
+		</div>
+		<div class='tall-inner card'>
+		<span class='card-header'>Event Info</span>
+			<span class='main-info'>
+				<span class='big-info'>Thursday, March 13, 2014</span>
+				<span class='small-info'>9am - 5pm</span>
+				<span class='big-info'>Doubletree Hilton Hotel</span>
+				<span class='small-info'>9599 Skokie Blvd.<br>Skokie, IL 60776</span>
+				<span class='xsmall-info'><a href='http://doubletree3.hilton.com/en/hotels/illinois/doubletree-by-hilton-hotel-chicago-north-shore-conference-center-CHICCDT/index.html' target='_blank'><i class='icon-share'></i> Website</a>
+				</span>
+				<div class='googlemap'>
+					<%= link_to 'http://goo.gl/maps/7pwbd', target: '_blank' do %>
+						<img class='map' src='https://googledrive.com/host/0BzGPB-VGfaP5bS0tU0FBeFE5UWc/map2.png'>
+					<% end %>
+				</div>
+			</span>
+		</div>
+	</div>	
+
+	<div class='wide card'>
+		<span class='quick-info'>
+			<i class='icon-chevron-right'></i>
+			<span class='bold'>Engineered Corrosion Solutions 2014.</span>
+			<span class='more-info'>A unique conference focusing on the fundamentals of corrosion from an economic and technical perspective.
+			</span>
 		</span>
 	</div>
 
