@@ -15,7 +15,6 @@ class AttendeesController < ApplicationController
   def create
     @attendee = Attendee.new(attendee_params)
     if @attendee.save 
-      UserMailer.welcome_email(@attendee).deliver
       redirect_to @attendee
     else
       render 'new'

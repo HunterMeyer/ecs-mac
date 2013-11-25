@@ -6,6 +6,7 @@ class PaymentNotificationsController < ApplicationController
   	if params[:payment_status] == 'Complete'
       attendee = Attendee.find(params[:invoice])
   	  attendee.update_attribute(:paid, Time.now)
+  	  UserMailer.welcome_email(@attendee).deliver
   	end
     render nothing: true
   end
