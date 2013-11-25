@@ -122,6 +122,7 @@ p {
 .sponsor a {
   display: block;
   color: #74B1DA;
+  width: 40%;
   font-size: 20px;
   margin-top: -5px;
   text-shadow: 0px 1px 1px black;
@@ -216,6 +217,19 @@ p {
 }
 
 /* Event Info Cards */
+span.show {
+  text-align: center !important;
+}
+
+.show-name {
+  font-size: 26px;
+  color: $darkGreen;
+}
+
+.show-about {
+  font-size: 18px;
+}
+
 .big-info {
   display: block;
   font-size: 20px;
@@ -271,11 +285,12 @@ span.card-header {
   display: inline-block;
   float: right;
   width: 35%;
+  margin-top: 2%;
 }
 
 div.tall-inner {
   background-color: $lightGreen;
-  margin-top: 5%;
+  margin-bottom: 6%;
 }
 
 div.tall {
