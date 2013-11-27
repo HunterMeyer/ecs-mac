@@ -1,0 +1,23 @@
+<% provide(:title, 'Lecture Suggestions') %>
+<div class='container'>
+  <h1>Lecture Suggestions</h1>
+
+  <% if @lectures.any? %>
+  	<table class='table table-striped'>
+      <tr>
+        <th class='orange'>Email</th>
+        <th class='orange'>Topic</th>
+        <th class='orange'>Suggested</th>
+      </tr>
+      <% @lectures.each do |lecture| %>
+    		<tr>
+          <td><%= "#{lecture.email}" %></td>
+          <td><%= "#{lecture.topic}"  %></td>
+          <td><%= "#{lecture.created_at}".strftime('%m/%d/%Y') %></td>
+        </tr>
+      <% end %>
+    </table>
+  <% else %>
+    <h2>No lecture suggestions.</h2>
+  <% end %>
+</div>
