@@ -1,6 +1,7 @@
 class LecturesController < ApplicationController
   def index
   	@lectures = Lecture.all
+  	authorize! :manage, @lectures
 	end
 
 	def new
