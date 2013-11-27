@@ -10,6 +10,7 @@
         <th class='orange'>Email</th>
         <th class='orange'>Phone</th>
         <th class='orange'>Industry</th>
+        <th class='orange'>Questions</th>
         <th class='orange'>Paid</th>
       </tr>
       <% @attendees.each do |attendee| %>
@@ -19,6 +20,7 @@
     	 	  <td><%= "#{attendee.email}"      %></td>
     	   	<td><%= "#{attendee.phone}"      %></td>
           <td><%= "#{attendee.industry}"   %></td>
+          <td><%= "#{attendee.questions}"  %></td>
           <% if attendee.paid %>
             <td><%= attendee.paid.strftime("%m-%d-%Y") %></td>
     	    <% else %>

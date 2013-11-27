@@ -12,6 +12,7 @@
         <th class='orange'>Phone</th>
         <th class='orange'>Speaking?</th>
         <th class='orange'>Speaking CEU?</th>
+        <th class='orange'>Comments</th>
       </tr>
       <% @vendors.each do |vendor| %>
     		<tr>
@@ -22,6 +23,7 @@
           <td><%= "#{vendor.phone}"           %></td>
           <td><%= "#{vendor.speak_topic}"     %></td>
           <td><%= "#{vendor.speak_topic_ceu}" %></td>
+          <td><%= "#{vendor.comments}"        %></td>
     	 </tr>
       <% end %>
     </table>
