@@ -10,6 +10,7 @@
 		<div class='form span4'>
 			<%= form_for @attendee do |f| %>
 				<%= render 'attendees/attendee_error_messages' %>
+				<span class='notice'>You will be prompted to pay $35 joining fee on next screen.</span>
 				<div class='controls controls-row'>
 					<%= f.text_field  :first_name, placeholder: 'First Name', autofocus: true, class: 'span2 dropshadow' %>
 					<%= f.text_field  :last_name,  placeholder: 'Last Name', class: 'span2 dropshadow' %>
