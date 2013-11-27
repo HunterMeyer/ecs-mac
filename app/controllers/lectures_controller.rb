@@ -11,7 +11,7 @@ class LecturesController < ApplicationController
 		@lecture = Lecture.new(lecture_params)
 		if @lecture.save
 			flash[:success] = 'Thanks for the input.'
-			redirect_to lectures_path
+			redirect_to new_lecture_path
 		else
 			render 'new'
 		end
