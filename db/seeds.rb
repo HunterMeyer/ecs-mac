@@ -12,7 +12,16 @@ admin = Admin.create(
 	email:                 'admin@user.com',
 	password:              '12345678',
 	password_confirmation: '12345678'
-	)
+)
+
+admin = Admin.create(
+	first_name:            'Warren',
+	last_name:             'LastName',
+	email:                 'warren@ecs.com',
+	password:              'ccgecs201411!!',
+	password_confirmation: 'ccgecs201411!!'
+)
+
 
 attendee = Attendee.create(
 	first_name:            'Attendee',
@@ -27,7 +36,7 @@ attendee = Attendee.create(
 	pull_out:              'Stand up desk',
 	concerns:              'Beach front property',
 	paid:                  Time.now
-	)
+)
 
 attendee = Attendee.create(
 	first_name:            'Richard',
@@ -41,7 +50,7 @@ attendee = Attendee.create(
 	industry:              'Space Travel',
 	pull_out:              'Virgin Galactic',
 	concerns:              'Keeping my space ships clean'
-	)
+)
 
 vendor = Vendor.create(
 	first_name:            'Vendor',
@@ -56,7 +65,7 @@ vendor = Vendor.create(
 	comments:              'Looking forward to the event',
 	speak_topic:           true,
 	speak_topic_ceu:       true
-	)
+)
 
 vendor = Vendor.create(
 	first_name:            'Jim',
@@ -71,4 +80,4 @@ vendor = Vendor.create(
 	comments:              'Hey, get you hand out my pocket',
 	speak_topic:           true,
 	speak_topic_ceu:       false
-	)
+)
