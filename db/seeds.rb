@@ -16,7 +16,7 @@ admin = Admin.create(
 
 admin = Admin.create(
 	first_name:            'Warren',
-	last_name:             'LastName',
+	last_name:             'Brand',
 	email:                 'warren@ecs.com',
 	password:              'ccgecs201411!!',
 	password_confirmation: 'ccgecs201411!!'
