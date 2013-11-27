@@ -8,6 +8,7 @@ class PaymentNotification < ActiveRecord::Base
 	def mark_attendee_paid
 		if status == 'Completed'
 			attendee.update_attribute(:paid, Time.now)
+			UserMailer.welcome_email(attendee).deliver
 		end
 	end
 end
