@@ -33,8 +33,7 @@ attendee = Attendee.create(
 	state:                 'Florida',
 	zip:                   '32825',
 	industry:              'Software',
-	pull_out:              'Stand up desk',
-	concerns:              'Beach front property',
+	questions:             'Beach front property',
 	paid:                  Time.now
 )
 
@@ -48,8 +47,7 @@ attendee = Attendee.create(
 	state:                 'Florida',
 	zip:                   '35566',
 	industry:              'Space Travel',
-	pull_out:              'Virgin Galactic',
-	concerns:              'Keeping my space ships clean'
+	questions:             'Keeping my space ships clean'
 )
 
 vendor = Vendor.create(
