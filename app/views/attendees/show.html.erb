@@ -19,7 +19,7 @@
 				<input type="hidden" name="hosted_button_id" value="NY7FV77SGNH98">
 				<%= hidden_field_tag 'invoice', @attendee.id %>
 				<!-- CHANGE THE CALLBACK URL HERE -->
-				<%= hidden_field_tag 'notify_url', 'https://weap.localtunnel.me/payment_notifications' %>
+				<%= hidden_field_tag 'notify_url', 'http://rails-ecs.herokuapp.com/payment_notifications' %>
 				<input type="hidden" name="bn" value="PP-BuyNowBF:btn_paynowCC_LG.gif:NonHosted">
 				<!-- REMOVE 'SANDBOX' FROM URL HERE -->
 				<input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_paynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
